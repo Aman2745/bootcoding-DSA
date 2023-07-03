@@ -6,7 +6,9 @@ public class InsertAtLast {
         Node head=new Node(10);
         //insert element in linkedlist
         insert(head,20);
-
+        insert(head,30);
+        insert(head,40);
+        InsertAtLast.print(head);
     }
     public  static  void insert(Node head,int value){
         if(head==null){
@@ -21,7 +23,12 @@ public class InsertAtLast {
         temp.next=new Node(value);
     }
 
-    public static void print(){
-
+    private static void print(Node head) {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data+"->");
+            temp = temp.next;
+        }
+        System.out.print("null");
     }
 }
