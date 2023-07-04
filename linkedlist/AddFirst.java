@@ -1,7 +1,16 @@
 package linkedlist;
 
-public class InsertAtLast {
-    //inserting at last position
+public class AddFirst {
+
+    public static  void addfirst(Node head,int data){
+       Node newnode=new Node(data);
+        if(head==null){
+            head=newnode;
+            return;
+        }
+        newnode.next=head;
+        head=newnode;
+    }
     public  static  void insert(Node head,int value){
         if(head==null){
             head=new Node(value);
@@ -13,20 +22,7 @@ public class InsertAtLast {
         }
         temp.next=new Node(value);
     }
-
-    public static  void deletenode(Node head){
-        Node current=head;
-        Node previous=current;
-        while(current.next!=null){
-            previous=current;
-            current=current.next;
-        }
-        previous.next=null;
-    }
-
-
-    //print function
-    private static void print(Node head) {
+    public static void print(Node head) {
         Node temp = head;
         while (temp != null) {
             System.out.print(temp.data+"->");
@@ -36,12 +32,13 @@ public class InsertAtLast {
     }
     public static void main(String[] args) {
         Node head=new Node(10);
-        //insert element in linkedlist
-        insert(head,20);
-        insert(head,30);
-        insert(head,40);
-        deletenode(head);
+        addfirst(head,30);
         insert(head,3);
-        InsertAtLast.print(head);
+        insert(head,33);
+        addfirst(head,5);
+        print(head);
     }
+
+
+
 }
