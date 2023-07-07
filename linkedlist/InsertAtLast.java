@@ -43,5 +43,6 @@ public class InsertAtLast {
         deletenode(head);
         insert(head,3);
         InsertAtLast.print(head);
+        PrimeNumber.checkprime(head);
     }
 }
