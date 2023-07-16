@@ -10,7 +10,7 @@ public class Palindo_String {
 
         for(int i=0;i<s.length()/2;i++){
             char start=s.charAt(i);
-            char end=s.charAt(s.length()-1-i);
+            char end=s.charAt(s.length()-1-i);//from last point it is decrementing
             if(start!=end){
                 return false;
             }
